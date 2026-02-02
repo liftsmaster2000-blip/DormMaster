@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dorm Utility - Admin</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ocampo, Micah B.">
+    <meta name="keywords" content="HTML, JavaScript">
+    <meta name="revised" content="02-02-2026">
+    <link rel="icon" href="icon.png" type="image/gif">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header class="hasBG">
+        <p>Dorm Utility - Admin Panel</p>
+     </header>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Time</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
